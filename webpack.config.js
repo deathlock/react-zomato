@@ -2,15 +2,29 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-	entry: "./src/index.js",
+  stats: {
+        // Configure the console output
+        errorDetails: true, //this does show errors
+        colors: false,
+        modules: true,
+        reasons: true
+  },
+  entry: "./src/index.js",
   mode: "development",
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
+        include: [
+          path.resolve(__dirname, "src"),
+          path.resolve(__dirname, "dist"),
+        ],
         loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        options: {
+                  "presets": ["@babel/preset-env"],
+                  "plugins": ["transform-react-jsx"]
+                 }
       },
       {
         test: /\.css$/,

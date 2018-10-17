@@ -1,7 +1,7 @@
 {
-  "name": "react_boilerplate",
+  "name": "react_zomato",
   "version": "1.0.0",
-  "description": "React Boilerplate by Smit Raval",
+  "description": "React Zomato Demo by Smit Raval",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
@@ -10,21 +10,22 @@
   "author": "Smit Raval",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "bootstrap": "^4.1.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "css-loader": "^1.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "bootstrap": "^4.1.3",
     "file-loader": "^2.0.0",
     "image-webpack-loader": "^4.3.1",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.4",
-    "style-loader": "^0.23.0",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.8"
+    "popper.js": "^1.14.4"
   },
   "dependencies": {
     "react": "^16.5.2",
