@@ -1,15 +1,31 @@
-.App {
-  font-family: Arial, Helvetica, sans-serif;
-}
-footer {
-	padding:10px;
-}
-.loader img {
-	 width: 300px;
-   height: 300px;
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   margin-left: -150px;
-   margin-top: -150px;
-}
+/******** Common ********/
+body, html{ margin:0; padding:0; }
+.App { font-family: Arial, Helvetica, sans-serif; }
+.white-color{ color: #fff !important; }
+.wrapper { margin: 0px 10px; }
+
+/******** Header ********/
+nav{ background-color: #cb202d; padding: 0rem 1rem !important; z-index: 1; box-shadow: 0px 0px 35px #000;}
+nav a.navbar-brand { font-weight: bold; font-size: 26px; }
+nav .search-input { height: calc(2.00rem + 0px) !important; }
+nav .search-button { padding: 0.1rem .75rem; }
+
+/******** Banner ********/
+.banner-image { position: relative;  }
+.banner-image img { width: 100%; -webkit-filter: blur(3px); filter: blur(3px); }
+.banner-image .banner-overlay { display: block; position: absolute; left: 0; top: 0; background: rgba(0,0,0,0.2); height: 100%; z-index: 1000; width: 100%; }
+.banner-image .banner-overlay .banner-text { font-size: 40px;padding: 10%; }
+.search-wrapper { position: relative; }
+.search-wrapper .search-city { width: 20%; position: absolute; left: 20%; }
+.search-wrapper .search-rest { width: 40%; position: absolute; left: 41%; }
+
+/******** Footer ********/
+footer { padding:8px; background-color: #cb202d; }
+
+/******** Loader ********/
+.loader { position: absolute; display: block; left: 0; top: 0; z-index: 100000; right: 0; bottom: 0; background: #fff; }
+.loader img { width: 300px; height: 300px; position: absolute; left: 50%; top: 50%; margin-left: -150px; margin-top: -150px; }
+
+/******** Collection ********/
+.collection-tiles { width: 16rem; float: left; margin: 10px 20px; }
+.collection-tiles .card-img-top {height: 200px;}

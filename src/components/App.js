@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "babel-polyfill";
 import {hot} from "react-hot-loader";
 import $ from 'jquery';
 
@@ -6,6 +7,8 @@ import $ from 'jquery';
 import Header from './common/header.js';
 import Footer from './common/footer.js';
 import Loader from './common/loader.js';
+import Banner from './common/banner.js';
+import Collection from './parent/collectionFetcher.js';
 
 /************* Bootstrap *************/
 import "popper.js/dist/popper.min.js";
@@ -18,45 +21,23 @@ import "../../public/css/App.css";
 class App extends Component {
 	constructor() {
 		super();
-		this.state = {
-			loader: true
-		}
-
-		this.showLoader = this.showLoader.bind(this);
-		this.showContent = this.showContent.bind(this);
-	}
-
-	componentDidMount() {
-		this.setState({ loader: false });
 	}
 
 	render() {
 		return (
 				<div className="App">
-				{
-					this.state.loader ? this.showLoader() : this.showContent()
-				}
+					<Header />
+					<Banner />
+						<div className="container wrapper">
+							<div className="row">
+								<Collection />
+							</div>
+						</div>
+					<Footer />
 				</div>
 			);
 	}
-
-	showLoader() {
-		return(
-					<Loader />
-			);
-	}
-
-	showContent() {
-		return(
-					<div>
-					<Header />
-						<div className="container">
-							<h1>Hello World!!</h1>
-						</div>
-					<Footer />
-					</div>
-			);
-	}
 }
+
 
 export default hot(module)(App);
